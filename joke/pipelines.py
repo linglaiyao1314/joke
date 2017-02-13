@@ -3,13 +3,13 @@ import pymongo
 import elasticsearch
 from elasticsearch import helpers
 
+
 class JokePipeline(object):
     def process_item(self, item, spider):
         return item
 
 
 class MongoPipeline(object):
-
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri
         self.mongo_db = mongo_db
